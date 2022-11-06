@@ -113,7 +113,7 @@ Error: Invalid or corrupt jarfile /home/ec2-user/app/travis/jar
 > Build 파일 복사
 > Jar Name: spring-webservice-0.0.3-SNAPSHOT.jar
 Error: Unable to access jarfile /home/ec2-user/app/travis/spring-webservice-0.0.3-SNAPSHOT.jar
-> 21:27
+> 
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
