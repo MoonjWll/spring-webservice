@@ -22,7 +22,7 @@ public class PostsRepositoryTest {
     @Autowired
     PostsRepository postsRepository;
 
-    @AfterAll
+    @AfterEach
     public void cleanup(){
         postsRepository.deleteAll();
     }

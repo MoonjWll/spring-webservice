@@ -1,0 +1,95 @@
+no main manifest attribute, in /home/ec2-user/app/git/spring-webservice-0.0.1-SNAPSHOT-plain.jar
+no main manifest attribute, in /home/ec2-user/app/git/spring-webservice-0.0.1-SNAPSHOT-plain.jar
+no main manifest attribute, in /home/ec2-user/app/git/spring-webservice-0.0.1-SNAPSHOT-plain.jar
+no main manifest attribute, in /home/ec2-user/app/git/spring-webservice-0.0.1-SNAPSHOT-plain.jar
+no main manifest attribute, in /home/ec2-user/app/git/spring-webservice-0.0.1-SNAPSHOT-plain.jar
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.5)
+
+2022-11-06 04:41:43.197  INFO 30927 --- [           main] com.mwe.webservice.Application           : Starting Application using Java 11.0.17 on ip-172-31-46-20.ap-northeast-2.compute.internal with PID 30927 (/home/ec2-user/app/git/spring-webservice-0.0.1-SNAPSHOT.jar started by ec2-user in /home/ec2-user/app/git/spring-webservice)
+2022-11-06 04:41:43.205  INFO 30927 --- [           main] com.mwe.webservice.Application           : The following 1 profile is active: "local"
+2022-11-06 04:41:46.405  INFO 30927 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-06 04:41:46.550  INFO 30927 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 1 JPA repository interfaces.
+2022-11-06 04:41:47.592  INFO 30927 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$e8c3c829] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 04:41:47.668  INFO 30927 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 04:41:47.686  INFO 30927 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 04:41:47.698  INFO 30927 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$fbaaf2c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 04:41:47.831  INFO 30927 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 04:41:48.528  INFO 30927 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-06 04:41:48.560  INFO 30927 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-06 04:41:48.560  INFO 30927 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-06 04:41:48.793  INFO 30927 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-06 04:41:48.794  INFO 30927 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5394 ms
+2022-11-06 04:41:50.219  INFO 30927 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-06 04:41:50.725  INFO 30927 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-06 04:41:50.891  INFO 30927 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-06 04:41:51.074  INFO 30927 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-06 04:52:56.883  WARN 30927 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m18s320ms130µs248ns).
+2022-11-06 04:52:59.378  INFO 30927 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-06 04:53:00.259  INFO 30927 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: drop table if exists posts CASCADE 
+Hibernate: create table posts (id bigint generated by default as identity, created_date timestamp, modified_date timestamp, author varchar(255), content TEXT not null, title varchar(500) not null, primary key (id))
+2022-11-06 04:53:02.525  INFO 30927 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-06 04:53:02.542  INFO 30927 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06 04:53:03.885  WARN 30927 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-06 04:53:05.066  WARN 30927 --- [           main] c.g.jknack.handlebars.HelperRegistry     : Helper 'capitalize' has been replaced by 'capitalize'
+2022-11-06 04:53:05.067  WARN 30927 --- [           main] c.g.jknack.handlebars.HelperRegistry     : Helper 'slugify' has been replaced by 'slugify'
+2022-11-06 04:53:05.067  WARN 30927 --- [           main] c.g.jknack.handlebars.HelperRegistry     : Helper 'wordWrap' has been replaced by 'wordWrap'
+2022-11-06 04:53:05.094  INFO 30927 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-11-06 04:53:05.251  INFO 30927 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06 04:53:05.289  INFO 30927 --- [           main] com.mwe.webservice.Application           : Started Application in 684.068 seconds (JVM running for 685.411)
+2022-11-06 04:53:26.886  WARN 30927 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m52s448ms402µs307ns).
+2022-11-06 05:05:45.553  WARN 30927 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s54ms379µs984ns).
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.5)
+
+2022-11-06 05:06:14.591  INFO 2757 --- [           main] com.mwe.webservice.Application           : Starting Application using Java 11.0.17 on ip-172-31-46-20.ap-northeast-2.compute.internal with PID 2757 (/home/ec2-user/app/git/spring-webservice-0.0.1-SNAPSHOT.jar started by ec2-user in /home/ec2-user/app/git/spring-webservice)
+2022-11-06 05:06:14.600  INFO 2757 --- [           main] com.mwe.webservice.Application           : The following 1 profile is active: "local"
+2022-11-06 05:06:17.174  INFO 2757 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-06 05:06:17.319  INFO 2757 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 126 ms. Found 1 JPA repository interfaces.
+2022-11-06 05:06:18.307  INFO 2757 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$e8c3c829] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 05:06:18.371  INFO 2757 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 05:06:18.388  INFO 2757 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 05:06:18.399  INFO 2757 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$fbaaf2c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 05:06:18.521  INFO 2757 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 05:06:19.182  INFO 2757 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-06 05:06:19.208  INFO 2757 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-06 05:06:19.213  INFO 2757 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-06 05:06:19.437  INFO 2757 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-06 05:06:19.438  INFO 2757 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4682 ms
+2022-11-06 05:06:20.859  INFO 2757 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-06 05:06:21.567  INFO 2757 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-06 05:06:21.737  INFO 2757 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-06 05:06:21.886  INFO 2757 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-06 05:06:22.631  INFO 2757 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-06 05:06:23.084  INFO 2757 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: drop table if exists posts CASCADE 
+Hibernate: create table posts (id bigint generated by default as identity, created_date timestamp, modified_date timestamp, author varchar(255), content TEXT not null, title varchar(500) not null, primary key (id))
+2022-11-06 05:06:24.461  INFO 2757 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-06 05:06:24.483  INFO 2757 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06 05:06:25.706  WARN 2757 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-06 05:06:26.731  WARN 2757 --- [           main] c.g.jknack.handlebars.HelperRegistry     : Helper 'capitalize' has been replaced by 'capitalize'
+2022-11-06 05:06:26.744  WARN 2757 --- [           main] c.g.jknack.handlebars.HelperRegistry     : Helper 'slugify' has been replaced by 'slugify'
+2022-11-06 05:06:26.744  WARN 2757 --- [           main] c.g.jknack.handlebars.HelperRegistry     : Helper 'wordWrap' has been replaced by 'wordWrap'
+2022-11-06 05:06:26.770  INFO 2757 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-11-06 05:06:26.885  INFO 2757 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06 05:06:26.923  INFO 2757 --- [           main] com.mwe.webservice.Application           : Started Application in 13.885 seconds (JVM running for 15.233)
+2022-11-06 05:31:37.635  WARN 2757 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52s300ms513µs811ns).
+2022-11-06 05:33:16.203  WARN 2757 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m21s271ms278µs825ns).
+2022-11-06 05:35:03.308  INFO 2757 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06 05:35:03.310  INFO 2757 --- [ionShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+Hibernate: drop table if exists posts CASCADE 
+2022-11-06 05:35:03.326  INFO 2757 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-06 05:35:03.334  INFO 2757 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
