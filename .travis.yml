@@ -22,23 +22,25 @@ cache:
 
 script: "./gradlew clean build"
 
+
+#  매번 Travis CI에 파일을 하나하나 복사하면 복사시간이 많이 걸리므로 프로젝트 폴더 채로 압축하여 S3에 전달하는 설정
 before_deploy:
-  - zip -r springboot-webservice *
+  - zip -r spring-webservice *
   - mkdir -p deploy
-  - mv springboot-webservice.zip deploy/springboot-webservice.zip
+  - mv spring-webservice.zip deploy/spring-webservice.zip
 
 deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
     secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
-    bucket: springboot-webservice-deploy # 6-3-3에서 생성한 S3 버킷
+    bucket: spring-webservice-deploy # 6-3-3에서 생성한 S3 버킷
     region: ap-northeast-2
     skip_cleanup: true
     acl: public_read
     local_dir: deploy # before_deploy에서 생성한 디렉토리
     wait-until-deployed: true
     on:
-      repo: jojoldu/springboot-webservice #Github 주소
+      repo: MoonjWll/spring-webservice #Github 주소
       branch: main
 
 # CI 실행 완료시 메일로 알람
