@@ -1,0 +1,12 @@
+#Test
+spring:
+  profiles:
+    active: local
+
+---
+spring:
+  jpa:
+    show-sql: true
+  config:
+    activate:
+      on-profile:
