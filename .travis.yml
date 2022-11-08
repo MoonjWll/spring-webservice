@@ -6,14 +6,6 @@ branches:
   only:
     - main
 
-#----- Travis CI에서 Push 후 반응이 없는 경우 프로젝트의 GIthub Repository가 바로 루트 경로에 있지 않은 확률이 높음.addons:
-#--- 해당 레포지토리에서 추가로 폴더를 생성하여 프로젝트가 생성된 경우!
-#--- 이럴 때, travis.yml을 build.gradle이 위치한 곳이 아니라 레포지토리 루트 경로에 생성해야한다.
-#--- 그 이후 아래 코드로 현재 위치로부터 프로젝트 빌드 진행할 곳으로 이동 필요하기 때문
-#before_script:
-#  -cd spring-webservice/
-#-----
-
 # Travis CI 서버의 Home
 cache:
   directories:
@@ -22,8 +14,6 @@ cache:
 
 script: "./gradlew clean build"
 
-
-#  매번 Travis CI에 파일을 하나하나 복사하면 복사시간이 많이 걸리므로 프로젝트 폴더 채로 압축하여 S3에 전달하는 설정
 before_deploy:
   - zip -r spring-webservice *
   - mkdir -p deploy
@@ -33,31 +23,30 @@ deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
     secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
-    bucket: spring-webservice-deploy-mw # 6-3-3에서 생성한 S3 버킷
+    bucket: spring-webservice-deploy-mw # S3 버킷
     region: ap-northeast-2
     skip_cleanup: true
     acl: public_read
     local_dir: deploy # before_deploy에서 생성한 디렉토리
     wait-until-deployed: true
     on:
-      repo: MoonjWll/spring-webservice #Github 주소
+      repo: MoonjWll/spring-webservice
       branch: main
 
   - provider: codedeploy
     access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
     secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
     bucket: spring-webservice-deploy-mw # S3 버킷
-    key: spring-webservice.zip # 빌드 파일을 압축해서 전달
+    key: spring-webservice.zip # S3 버킷에 저장된 spring-webservice.zip 파일을 EC2로 배포
     bundle_type: zip
     application: spring-webservice # 웹 콘솔에서 등록한 CodeDeploy 어플리케이션
-    deployment_group: spring-webservice-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹-
+    deployment_group: spring-webservice-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
     region: ap-northeast-2
     wait-until-deployed: true
     on:
       repo: MoonjWll/spring-webservice
       branch: main
 
-# CI 실행 완료시 메일로 알람
 notifications:
   email:
     recipients:
