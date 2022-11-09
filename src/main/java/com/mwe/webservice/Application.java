@@ -12,7 +12,7 @@ public class Application {
     public static final String APPLICATION_LOCATIONS = "spring.config.location="
                + "classpath:application.yml,"
                + "/home/ec2-user/app/config/spring-webservice/real-application.yml";
-        //    + "C:\\Users\\mwe61\\app\\config\\spring-webservice\\real-application.yml";
+//            + "C:\\Users\\mwe61\\app\\config\\spring-webservice\\real-application.yml";
 
     public static void main(String[] args) {
         new SpringApplicationBuilder(Application.class)
