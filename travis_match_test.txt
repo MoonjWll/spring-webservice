@@ -1,6 +1,0 @@
-for_test
-
-22.11.09 
-Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
-You need to be root to perform this command.
-yum -y install gcc mysql-devel ruby-devel rubygems
