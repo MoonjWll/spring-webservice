@@ -18,6 +18,7 @@ before_deploy:
   - zip -r spring-webservice *
   - mkdir -p deploy
   - mv spring-webservice.zip deploy/spring-webservice.zip
+  - yes | gem update --system --force
   - gem install bundler
 
 deploy:
