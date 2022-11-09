@@ -11,7 +11,7 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
-script: "./graldew clean build"
+script: "./gradlew clean build"
 
 before_deploy:
   - zip -r spring-webservice *
