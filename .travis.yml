@@ -18,8 +18,6 @@ before_deploy:
   - zip -r spring-webservice *
   - mkdir -p deploy
   - mv spring-webservice.zip deploy/spring-webservice.zip
-  - gem uninstall -v '>= 2' -i $(rvm gemdir)@global -ax bundler || true
-  - gem install bundler -v '> 2'
 
 deploy:
   - provider: s3
