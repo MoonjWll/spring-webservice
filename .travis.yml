@@ -33,6 +33,19 @@ deploy:
     repo: MoonjWll/spring-webservice #Github 주소
     branch: main
 
+ provider: codedeploy
+ access_key_id: $AWS_ACCESS_KEY
+ secret_access_key: $AWS_SECRET_KEY
+ bucket: spring-webservice-deploy-mwe
+ key: spring-webservice.zip
+ bundle_type: zip
+ deployment_group: spring-webservice-group
+ region: ap-northeast-2
+ wait-until-deployed: true
+ on:
+  repo: MoonjWll/spring-webservice
+  branch: main
+
 notifications:
   email:
     recipients:
