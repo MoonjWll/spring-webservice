@@ -14,7 +14,7 @@ import java.util.Arrays;
 public class WebRestController {
 
     private PostsService postsService;
-//    private Environment env;
+    private Environment env;
 
     @PostMapping("/posts")
     public Long savePosts(@RequestBody PostsSaveRequestDto dto)
@@ -23,12 +23,12 @@ public class WebRestController {
 
     }
 
-//    @GetMapping("/profile")
-//    public String getProfile () {
-//        return Arrays.stream(env.getActiveProfiles())
-//                .findFirst()
-//                .orElse("");
-//    }
+    @GetMapping("/profile")
+    public String getProfile () {
+        return Arrays.stream(env.getActiveProfiles())
+                .findFirst()
+                .orElse("");
+    }
 
 
 
