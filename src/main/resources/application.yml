@@ -1,5 +1,7 @@
 # Test
-  
+spring:
+  profiles:
+    activate: local
 
 # local 환경
 ---
