@@ -1,7 +1,8 @@
 # Test
 spring:
-  profiles:
-    activate: local
+  config:
+    activate:
+      on-profile: local
 
 # local 환경
 ---
