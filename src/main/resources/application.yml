@@ -1,6 +1,6 @@
 # Test
 spring:
-  config:
+  profiles:
     active: local
 
 # local 환경
@@ -10,4 +10,4 @@ spring:
     show-sql: true
   config:
     activate:
-      on-profile: 
+      on-profile: local

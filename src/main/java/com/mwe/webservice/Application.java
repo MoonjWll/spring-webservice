@@ -16,6 +16,7 @@ public class Application {
 //            + "C:\\Users\\mwe61\\app\\config\\spring-webservice\\real-application.yml";
 
     public static void main(String[] args) {
+//        System.setProperty("spring.profiles.default","local");
         new SpringApplicationBuilder(Application.class)
             .properties(APPLICATION_LOCATIONS)
             .run(args);
