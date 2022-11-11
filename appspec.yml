@@ -3,7 +3,11 @@ os: linux
 files:
   - source: /
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     destination: /home/ec2-user/app/travis/build/   
+=======
+    destination: /home/ec2-user/app/nonstop/spring-webservice/
+>>>>>>> Stashed changes
 hooks:
   AfterInstall:
     - location: execute-deploy.sh
