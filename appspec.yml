@@ -2,10 +2,9 @@ version: 0.0
 os: linux
 files:
   - source:  /
-    desination: /home/ec2-user/app/nonstop/spring-webservice/
+    destination: /home/ec2-user/app/nonstop/spring-webservice/
 
 hooks:
   AfterInstall:
     - location: execute-deploy.sh
       timeout: 180
-      
