@@ -10,4 +10,4 @@ spring:
     show-sql: true
   config:
     activate:
-      on-profile: local
+      on-profile: 
