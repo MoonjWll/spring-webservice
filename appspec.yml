@@ -2,8 +2,12 @@ version: 0.0
 os: linux
 files:
   - source: /
+<<<<<<< Updated upstream
     destination: /home/ec2-user/app/travis/build/   
 hooks:
   AfterInstall:
     - location: execute-deploy.sh
       timeout: 180
+=======
+    destination: /home/ec2-user/app/nonstop/spring-webservice/   
+>>>>>>> Stashed changes
