@@ -1,6 +1,6 @@
 package com.mwe.webservice.web;
 
-import com.mwe.webservice.domain.posts.PostsRepository;
+
 import com.mwe.webservice.dto.posts.PostsSaveRequestDto;
 import com.mwe.webservice.service.PostsService;
 import lombok.AllArgsConstructor;
