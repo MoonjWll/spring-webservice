@@ -12,7 +12,7 @@ spring:
 
 
 
-# local 환경
+# local 환경.
 ---
 spring:
   jpa:
